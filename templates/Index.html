@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div id="login-container">
+      <header class="banner">
+          <h1>Cyber Awareness Course</h1>
+      </header>
+      <div style="text-align: center;">
+        <img src="static/image/logo.png" alt="insert image" style="width: 90px; height: 90px;">
+      </div>
+      <form method="POST" action="/login">
+        <label for="username"><b>Username:</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"><b>Password:</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit">Login</button>
+      </form>
+      <div class="forgot-password">
+        <a href="/forgotten_password.html">Forgot Password</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
