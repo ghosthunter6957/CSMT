@@ -39,7 +39,7 @@ h2 {
   width: 80px; 
   height: 80px; 
   top:37px;
-  left:33%; 
+  left:20%; 
   transform-origin: top left; /* Keeps the top-left corner in place */
   transform: scale(1);
 }
@@ -58,8 +58,8 @@ button:hover {
 }
 
 #login-container {
-  width: 60%;
-  height: 50%;
+  width: 600px;
+  height: 450px;
   margin: 0 auto;
   padding: 40px;
   border: 2px solid #ccc;
