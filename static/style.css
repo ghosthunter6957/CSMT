@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  font-family: High Tower, sans-serif;
+  font-family: 'Aclonica', sans-serif;
   color: #000000;
 }
 /* Style the headings */
@@ -32,13 +32,16 @@ h2 {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background-color: #3C1053;
+  overflow: hidden;
 }
 #login-banner-img{
   position: absolute;
   width: 80px; 
   height: 80px; 
-  top:40px;
-  left:34%; 
+  top:37px;
+  left:33%; 
+  transform-origin: top left; /* Keeps the top-left corner in place */
+  transform: scale(1);
 }
 a {
   text-decoration: none;
@@ -96,6 +99,7 @@ button[type="submit"] {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
+  font-family: 'Aclonica', sans-serif;
     border: none;
     border-radius: 5px;
     background-color: #3C1053;
@@ -104,7 +108,7 @@ button[type="submit"] {
     cursor: pointer;
 }
 
-button1[type="submit"]:hover {
+button[type="submit"]:hover {
   background-color: #614B79;
 }
 
