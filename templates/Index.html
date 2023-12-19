@@ -8,24 +8,24 @@
 <body>
   <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
     <div id="login-container">
-      <header class="banner">
-          <h1>Cyber Awareness Course</h1>
-      </header>
-      <div style="text-align: center;">
-        <img src="static/image/logo.png" alt="insert image" style="width: 90px; height: 90px;">
+      <div id="login-banner">
+        <img src="static/image/logo.png" id="login-banner-img" alt="insert image"</img> 
+        <h2>Cyber Security</h2>
+        <h1>Awareness</h1> 
       </div>
       <form method="POST" action="/login">
-        <label for="username"><b>Username:</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
-
-        <label for="password"><b>Password:</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
-
+        <div class="input-container">
+          <input type="text"  placeholder="Enter Username"  name="username" required> 
+          <img src="static/image/user.png" class="overlay-image" alt="Image">
+        </div>
+        <div class= "input-container">
+          <input type="password" placeholder="Enter Password" name="password" required>
+          <img src="static/image/key.png" class="overlay-image" alt="Image">
+        </div>
         <button type="submit">Login</button>
-      </form>
-      <div class="forgot-password">
-        <a href="/forgotten_password.html">Forgot Password</a>
-      </div>
+        <div class="forgot-password">
+          <a href="/forgotten_password.html">Forgot Password</a>
+        </div>
     </div>
   </div>
 </body>
