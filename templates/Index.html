@@ -20,19 +20,27 @@
         <h1>Awareness</h1> 
       </div>
       <form method="POST" action="/login">
-        <div class="input-container">
+        <div class="input-container", id = inputContainer>
           <input type="text"  placeholder="Enter Username"  name="username" required> 
-          <img src="static/image/user.png" class="overlay-image" alt="Image">
+          <img src="static/image/user.png" class="overlay-image" alt="Image"> 
         </div>
+        {% if Usererror %}
+          <p style="color: red;">{{ Usererror }}</p>
+        {% endif %}
         <div class= "input-container">
           <input type="password" placeholder="Enter Password" name="password" required>
           <img src="static/image/key.png" class="overlay-image" alt="Image">
         </div>
+        {% if Passerror %}
+          <p style="color: red;">{{ Passerror }}</p>
+        {% endif %}
+        
         <button type="submit">Login</button>
         <div class="forgot-password">
           <a href="/forgotten_password.html">Need assistance logging in?</a>
         </div>
     </div>
   </div>
+  <script src="static/scripts/scripts.js"></script>
 </body>
 </html>
