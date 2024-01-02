@@ -11,7 +11,7 @@ h1 {
   font-size: 40px;
   margin-bottom: 10px;
   text-align: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 h2 {
@@ -19,7 +19,12 @@ h2 {
   text-align: center;
   color: #FFFFFF;
 }
-
+.login-container-position{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
 #login-banner {
   padding-top: 40px;
   position: relative;

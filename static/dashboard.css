@@ -1,0 +1,30 @@
+
+#login-container {
+  width: 600px;
+  height: 450px;
+  margin: 0 auto;
+  padding: 80px;
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.login-container-position{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #f5ec00;
+}
+h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #f5ec00;
+}
