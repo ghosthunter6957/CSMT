@@ -14,7 +14,6 @@ def main():
 def login():
   username = request.form.get('username')
   password = request.form.get('password')
-  print("hello world")
   site_root = os.path.realpath(os.path.dirname(__file__))
   json_url = os.path.join(site_root, "data", "passwords.json")
   with open(json_url, 'r') as f:
@@ -23,9 +22,12 @@ def login():
     if user["username"] == username and user["password"] == password:
       priv = user["privilege"]
       name = user["username"]
-      return redirect(url_for('DashBoard', name=name, priv=priv))
+      if user["privilege"] == "admin":
+        return redirect(url_for('DashBoard', name=name, priv=priv))
+      else:
+        return redirect(url_for('MainMenu', name=name, priv=priv))
     elif user["username"] == username and user["password"] != password:
-      return render_template('Index.html', Passerror="Invalid Password")
+      return render_template('Index.html', Passerror="Invalid Password") 
   return render_template('Index.html', Usererror="User not found")
 
 
@@ -34,6 +36,12 @@ def DashBoard():
   name = request.args.get('name')
   priv = request.args.get('priv')
   return render_template('MainPage.html', name=name, priv=priv)
+
+@app.route('/MainMenu', methods=['GET', 'POST'])
+def MainMenu():
+  name = request.args.get('name')
+  priv = request.args.get('priv')
+  return render_template('MainMenu.html', name=name, priv=priv)
 
 
 app.run(host='0.0.0.0', port=81)
