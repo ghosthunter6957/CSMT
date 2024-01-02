@@ -4,7 +4,6 @@ from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
-
 @app.route('/')
 def main():
   return render_template('Index.html')
@@ -18,16 +17,24 @@ def login():
   json_url = os.path.join(site_root, "data", "passwords.json")
   with open(json_url, 'r') as f:
     users = json.load(f)
+  print(users)
   for user in users["users"]:
+    print(user)
     if user["username"] == username and user["password"] == password:
       priv = user["privilege"]
       name = user["username"]
-      if user["privilege"] == "admin":
+      if user["first"] == "Y":
+        user["first"] = "N"
+        print(user)
+        print("hi2")
+        with open(json_url, 'w') as f:
+          json.dump(users, f)
         return redirect(url_for('DashBoard', name=name, priv=priv))
       else:
         return redirect(url_for('MainMenu', name=name, priv=priv))
     elif user["username"] == username and user["password"] != password:
       return render_template('Index.html', Passerror="Invalid Password") 
+    f.close()
   return render_template('Index.html', Usererror="User not found")
 
 
