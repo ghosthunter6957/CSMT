@@ -46,6 +46,25 @@ def MainMenu():
   priv = request.args.get('priv')
   return render_template('MainMenu.html', name=name, priv=priv)
 
+@app.route('/Social', methods=['GET', 'POST'])
+def Social():
+  return render_template('/learning/Social.html')
+
+@app.route('/Phishing', methods=['GET', 'POST'])
+def Phishing():
+  return render_template('/learning/Phishing.html')
+
+@app.route('/Passwords', methods=['GET', 'POST'])
+def Passwords():
+  return render_template('/learning/Passwords.html')
+
+@app.route('/InsiderThreats', methods=['GET', 'POST'])
+def InsiderThreats():
+  return render_template('/learning/InsiderThreats.html')
+  
+@app.route('/USB', methods=['GET', 'POST'])
+def USB():
+  return render_template('/learning/USB.html')
 
 app.run(host='0.0.0.0', port=81)
 if __name__ == '__main__':

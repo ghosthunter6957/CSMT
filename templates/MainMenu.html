@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>MainMenu</title>
   <link rel="stylesheet" href="static/Masterpage.css">
-  <link rel="stylesheet" href="static/MainMenu.css">
+  <link rel="stylesheet" href="static/MainMenu.css"> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
   <script src="../static/scripts/scripts.js"></script>
 </head>
@@ -27,15 +27,24 @@
         </button>
       </div>
       <img src="static/image/password-safety.png" id="password-safety-img"> </img>
-      <div id="password-button"> Passwords </div>
+      <form action="/Passwords" method="post">
+      <button id="password-button"> Passwords </button> </form>
+      
       <img src="static/image/social engineering.jpg" id="social-engineering-img" > </img>
-      <div id="social-engineering-button"> Social Engineering </div>
-      <img src="static/image/phishing.png" id="phishing-img"> </img>
-      <div id="phishing-button"> Phishing </div>
+      <form action="/Social" method="post">
+      <button id="social-engineering-button" action="/Social"> Social Engineering </button>         </form>
+        
+      <img src="static/image/phishing.png" id="phishing-img"> </img> 
+      <form action="/Phishing" method="post"> 
+      <button id="phishing-button"> Phishing </button> </form>
+        
       <img src="static/image/insider threats.png" id="insider-threats-img"> </img>
-      <div id="insider-threats-button"> Insider Threats </div>
+      <form action="/InsiderThreats" method="post">
+      <button id="insider-threats-button"> Insider Threats </button> </form>
+        
       <img src="static/image/USBs.png" id="USBs-img"> </img>
-      <div id="USB-button"> USB </div>
+      <form action="/USB" method="post">
+      <button id="USB-button"> USB </button> </form>
     </div>
   </div>
 </body>
