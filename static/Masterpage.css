@@ -6,9 +6,11 @@ h1 {
   color: #ffffff;
   margin-bottom: 0px;
 }
+
 body {
   font-family: 'Aclonica', sans-serif;
 }
+
 h2 {
   font-size: 30px;
   margin-left: 25px;
@@ -16,9 +18,19 @@ h2 {
   color: #ffffff;
   margin-top: 3px;
 }
+
 button{
   cursor: pointer;
 }
+
+.hidden{
+  visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
+}
+
 #master-container {
   width: 700px;
   height: 500px;
@@ -83,4 +95,11 @@ button{
   display: inline-block;
   border: none;
   background: none;
+}
+
+#master-dropdown-menu{
+  background-color: #f9f9f9;
+  height: 100%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }

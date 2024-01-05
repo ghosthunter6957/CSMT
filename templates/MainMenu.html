@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="static/Masterpage.css">
   <link rel="stylesheet" href="static/MainMenu.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+  <script src="../static/scripts/scripts.js"></script>
 </head>
 <body>
   <div id="master-container-position">
@@ -19,7 +20,22 @@
         <h3> Menu </h3>
       </div>
       <div id="master-dropdown">
-        <button id="master-dropdown-button">
+        <button id="master-dropdown-button" onclick="showdropdown()">
          <img src="static/image/dropdown.png"> </img>
+        <div id="master-dropdown-menu" class="hidden">
+        </div>
         </button>
       </div>
+      <img src="static/image/password-safety.png" id="password-safety-img"> </img>
+      <div id="password-button"> Passwords </div>
+      <img src="static/image/social engineering.jpg" id="social-engineering-img" > </img>
+      <div id="social-engineering-button"> Social Engineering </div>
+      <img src="static/image/phishing.png" id="phishing-img"> </img>
+      <div id="phishing-button"> Phishing </div>
+      <img src="static/image/insider threats.png" id="insider-threats-img"> </img>
+      <div id="insider-threats-button"> Insider Threats </div>
+      <img src="static/image/USBs.png" id="USBs-img"> </img>
+      <div id="USB-button"> USB </div>
+    </div>
+  </div>
+</body>
