@@ -24,17 +24,18 @@ h2 {
   margin-top: 3px;
 }
 
-
 button{
   cursor: pointer;
 }
 
 .hidden{
-  visibility: hidden;
+  opacity: 0;
+  width: 0%;
 }
 
 .visible{
-  visibility: visible;
+  opacity: 1;
+  width: 30%;
 }
 
 #master-container {
@@ -97,6 +98,7 @@ button{
   justify-content: center;
   align-items: center;
   position: absolute;
+  z-index: 999;
 }
 #master-dropdown-button{
   display: inline-block;
@@ -105,8 +107,95 @@ button{
 }
 
 #master-dropdown-menu{
-  background-color: #f9f9f9;
+  background-color:#e2dce5;
   height: 100%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 998;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+  transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+#dropdown-social-engineering-button {
+  width: 38%;
+  padding: 9px;
+  margin-top: -218.5px;
+  margin-left: 84px;
+  font-family: 'Aclonica', sans-serif;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3C1053;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
+}
+#dropdown-phishing-button {
+  width: 38%;
+  padding: 9px;
+  margin-top: -117.5px;
+  margin-left: 84px;
+  font-family: 'Aclonica', sans-serif;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3C1053;
+  color: #fff;
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
+}
+#dropdown-password-button {
+  width: 38%;
+  padding: 9px;
+  margin-top: -28.5px;
+  margin-left: 84px;
+  font-family: 'Aclonica', sans-serif;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3C1053;
+  color: #fff;
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#dropdown-insider-threats-button {
+  width: 38%;
+  padding: 9px;
+  margin-top: 61.5px;
+  margin-left: 84px;
+  font-family: 'Aclonica', sans-serif;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3C1053;
+  color: #fff;
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#dropdown-USB-button {
+  width: 38%;
+  padding: 9px;
+  margin-top: 170.5px;
+  margin-left: 84px;
+  font-family: 'Aclonica', sans-serif;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #3C1053;
+  color: #fff;
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
 }

@@ -26,10 +26,10 @@
 }
 
 #insider-threats-img {
-  width: 315px;
+  width: 280px;
   height: 215px;
   border-radius: 50px;
-  margin-left: 60px;
+  margin-left: 55px;
   margin-top: 299px;
   position: absolute;
 }
@@ -92,7 +92,7 @@
 #insider-threats-button {
   width: 18%;
   padding: 9px;
-  margin-top: 514px;
+  margin-top: 511px;
   margin-left: 121px;
   font-family: 'Aclonica', sans-serif;
   border: none;
@@ -108,8 +108,8 @@
 #USB-button {
   width: 18%;
   padding: 9px;
-  margin-top: 513px;
-  margin-left: 408px;
+  margin-top: 511px;
+  margin-left: 418px;
   font-family: 'Aclonica', sans-serif;
   border: none;
   text-align: center;

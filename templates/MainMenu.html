@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="static/Masterpage.css">
   <link rel="stylesheet" href="static/MainMenu.css"> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
-  <script src="../static/scripts/scripts.js"></script>
 </head>
 <body>
   <div id="master-container-position">
@@ -19,32 +18,52 @@
       <div id="master-pagetitle">
         <h3> Menu </h3>
       </div>
+      <div class="hidden" id="master-dropdown-menu">
+        <form action="/Passwords" method="post">
+          <button id="dropdown-password-button"> Passwords </button> 
+        </form>
+        <form action="/Social" method="post">
+          <button id="dropdown-social-engineering-button" action="/Social"> Social Engineering </button>         
+        </form>
+        <form action="/Phishing" method="post"> 
+          <button id="dropdown-phishing-button"> Phishing </button> 
+        </form>
+        <form action="/InsiderThreats" method="post">
+          <button id="dropdown-insider-threats-button"> Insider Threats </button> 
+        </form>
+        <form action="/USB" method="post">
+          <button id="dropdown-USB-button"> USB </button> 
+        </form>
+      </div>
       <div id="master-dropdown">
         <button id="master-dropdown-button" onclick="showdropdown()">
-         <img src="static/image/dropdown.png"> </img>
-        <div id="master-dropdown-menu" class="hidden">
-        </div>
+        <img src="static/image/dropdown.png"> </img>
         </button>
       </div>
       <img src="static/image/password-safety.png" id="password-safety-img"> </img>
       <form action="/Passwords" method="post">
-      <button id="password-button"> Passwords </button> </form>
+        <button id="password-button"> Passwords </button> 
+      </form>
       
       <img src="static/image/social engineering.jpg" id="social-engineering-img" > </img>
       <form action="/Social" method="post">
-      <button id="social-engineering-button" action="/Social"> Social Engineering </button>         </form>
+        <button id="social-engineering-button" action="/Social"> Social Engineering </button>         
+      </form>
         
       <img src="static/image/phishing.png" id="phishing-img"> </img> 
       <form action="/Phishing" method="post"> 
-      <button id="phishing-button"> Phishing </button> </form>
+        <button id="phishing-button"> Phishing </button> 
+      </form>
         
       <img src="static/image/insider threats.png" id="insider-threats-img"> </img>
       <form action="/InsiderThreats" method="post">
-      <button id="insider-threats-button"> Insider Threats </button> </form>
-        
+        <button id="insider-threats-button"> Insider Threats </button> 
+      </form>
       <img src="static/image/USBs.png" id="USBs-img"> </img>
       <form action="/USB" method="post">
-      <button id="USB-button"> USB </button> </form>
+        <button id="USB-button"> USB </button> 
+      </form>
     </div>
   </div>
+  <script src="../static/scripts/scripts.js"></script>
 </body>
