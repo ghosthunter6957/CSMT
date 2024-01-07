@@ -66,6 +66,18 @@ def InsiderThreats():
 def USB():
   return render_template('/learning/USB.html')
 
+@app.route('/PhishQuiz', methods=['GET', 'POST'])
+def PhishQuiz():
+  return render_template('/Quiz/PhishQuiz.html')
+
+@app.route('/SocialQuiz', methods=['GET', 'POST'])
+def SocialQuiz():
+  return render_template('/Quiz/SocialQuiz.html')
+
+@app.route('/PasswordQuiz', methods=['GET','POST'])
+def PasswordQuiz():
+  return render_template('/Quiz/PasswordQuiz.html')
+
 app.run(host='0.0.0.0', port=81)
 if __name__ == '__main__':
   app.run()

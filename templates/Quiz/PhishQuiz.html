@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Phishing</title>
   <link rel="stylesheet" href="static/Masterpage.css">
-  <link rel="stylesheet" href="static/learning.css/Phishing.css"> 
+  <link rel="stylesheet" href="static/Quiz/PhishQuiz.css"> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
   <script src="../static/scripts/scripts.js"></script>
 </head>
@@ -16,8 +16,8 @@
         <h1>Awareness</h1>
         <img src="static/image/logo.png" id="master-banner-img" alt="insert image"</img>
       </div>
-      <div id="master-pagetitle">
-        <h3> Phishing </h3>
+      <div style="height:47px; padding-top:29.29px" id="master-pagetitle">
+        <quiz-title> Phishing Quiz </quiz-title>
       </div>
       <div class="hidden" id="master-dropdown-menu">
         <form action="/Passwords" method="post">
@@ -36,21 +36,16 @@
             <button id="dropdown-USB-button"> USB </button> 
           </form>
         </div>
-      <div style="margin-top:-115.5px" id="master-dropdown">
+      <div style="margin-top:-76.5px" id="master-dropdown">
         <button id="master-dropdown-button" onclick="showdropdown()">
          <img src="static/image/dropdown.png"> </img>
         <div id="master-dropdown-menu" class="hidden">
         </div>
         </button>
       </div>
-      <form action="/PhishQuiz" method="post">
-      <button id="master-nextpage-button"> Start Quiz </button>
-      </form>
-      <img src="static/image/phishinglearn.png" id="phishing-learn-img" alt="insert image"</img>
-       <div id="phishingtext"> A: When looking in the email<br /> header the senders email will <br /> have no correlation with the <br /> email and if ran against an email <br /> checker such as “centralops.net” <br /> it will come back with a low score. </div>
-      <div style="margin-top:264.5px" id="phishingtext"> B: When looking at both B’s the names <br /> are not consistent which <br /> is a big give-away.</div>
-      <div style="margin-top:314.5px" id="phishingtext"> C: They never give a real name but rather <br /> just the recipients email.</div>
-      <div style="margin-top:354.5px" id="phishingtext"> D: They highlight fake winnings <br /> to try and entice you to click on the link.</div>
+      <button id="master-nextpage-button">???</button>
+      <img src="static/image/PhishQuizMat.png" id="phishing-Quiz-img" alt="insert image"</img>
+       
       </div>
   </div>
 </body>

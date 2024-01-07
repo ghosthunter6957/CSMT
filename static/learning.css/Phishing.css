@@ -1,0 +1,15 @@
+#phishing-learn-img{
+  position: absolute;
+  width: 600px; 
+  height: 420px; 
+  top:140px;
+  left:1%; 
+}
+
+#phishingtext{
+  font-size: 10px;
+  position: absolute;
+  margin-left: 553px;
+  margin-top: 180px;
+  color: #000000;
+}
