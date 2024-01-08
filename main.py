@@ -1,9 +1,9 @@
 import os, json
-from flask import Flask, render_template, request, url_for
+from flask import Flask, render_template, request, url_for, session
 from werkzeug.utils import redirect
 
 app = Flask(__name__)
-
+app.secret_key = 'your_secret_key'
 
 @app.route('/')
 def main():
@@ -14,41 +14,24 @@ def main():
 def login():
   username = request.form.get('username')
   password = request.form.get('password')
-  site_root = os.path.realpath(os.path.dirname(__file__))
-  json_url = os.path.join(site_root, "data", "passwords.json")
-  with open(json_url, 'r') as f:
+  with open('data/passwords.json', 'r') as f:
     users = json.load(f)
   for user in users["users"]:
     if user["username"] == username and user["password"] == password:
-      priv = user["privilege"]
-      name = user["username"]
+      session['name'] = user["username"]
+      session['passw'] = user["password"]
       if user["first"] == "Y":
         user["first"] = "N"
-        with open(json_url, 'w') as f:
+        with open('data/passwords.json', 'w') as f:
           json.dump(users, f)
-        return redirect(url_for('DashBoard', name=name, priv=priv))
+        return render_template('MainPage.html',)
       else:
-        return redirect(url_for('MainMenu', name=name, priv=priv))
+        return render_template('MainMenu.html')
     elif user["username"] == username and user["password"] != password:
       return render_template('Index.html', Passerror="Invalid Password")
     f.close()
   return render_template('Index.html', Usererror="User not found")
-
-
-@app.route('/DashBoard', methods=['GET', 'POST'])
-def DashBoard():
-  name = request.args.get('name')
-  priv = request.args.get('priv')
-  return render_template('MainPage.html', name=name, priv=priv)
-
-
-@app.route('/MainMenu', methods=['GET', 'POST'])
-def MainMenu():
-  name = request.args.get('name')
-  priv = request.args.get('priv')
-  return render_template('MainMenu.html', name=name, priv=priv)
-
-
+  
 @app.route('/Social', methods=['GET', 'POST'])
 def Social():
   return render_template('/learning/Social.html')
@@ -105,10 +88,49 @@ def PasswordQuiz():
 @app.route('/InsiderThreatsQuiz', methods=['GET', 'POST'])
 def InsiderThreatsQuiz():
   return render_template('/Quiz/InsiderThreatsQuiz.html')
-
-@app.route('/ResultsProcess', methods=['GET', 'POST'])
-def ResultsProcess():
-  return (print("hi"))
+  
+@app.route('/Send_Data', methods=['GET', 'POST'])
+def Send_Data():
+  data = request.get_json()
+  received_variable = list(data.keys())[0] #key
+  received_data = data.get(received_variable) #value of key
+  name1 = session['name']
+  passw1 = session['passw']
+  with open('data/passwords.json', 'r') as f:
+    users = json.load(f)
+  for user in users["users"]:
+    if user["username"] == name1 and user["password"] == passw1:
+      if received_variable == "passTotal":
+        user["Pass"] = received_data
+        with open('data/passwords.json', 'w') as f:
+          json.dump(users, f)
+          f.close()
+        return "InsiderThreats"
+      elif received_variable == "phishTotal":
+        user["Phish"] = received_data
+        with open('data/passwords.json', 'w') as f:
+          json.dump(users, f)
+          f.close()
+        return "Passwords"
+      elif received_variable == "usbTotal":
+        user["USB"] = received_data
+        with open('data/passwords.json', 'w') as f:
+          json.dump(users, f)
+          f.close()
+        return "Certificate"
+      elif received_variable == "socialTotal":
+        user["Social"] = received_data
+        with open('data/passwords.json', 'w') as f:
+          json.dump(users, f)
+          f.close()
+        return "Phishing"
+      elif received_variable == "insiderTotal":
+        user["Insider"] = received_data
+        with open('data/passwords.json', 'w') as f:
+          json.dump(users, f)
+          f.close()
+        return "USB"
+  return "Data Received"
 
 
 app.run(host='0.0.0.0', port=81)

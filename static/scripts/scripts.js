@@ -13,6 +13,8 @@ function showdropdown(){
 }
 
 function confirm_answers_password(){
+   var confirm = window.confirm("Do you want to submit your answers?");
+  if (confirm){
   var PassQ1 = document.querySelector('input[name="StrongPass_Comp"]:checked')
   var PassQ2 = document.querySelector('input[name="MinLength_Pass"]:checked')
   var PassQ3 = document.querySelector('input[name="Strongest_Pass"]:checked')
@@ -25,11 +27,22 @@ function confirm_answers_password(){
     if (PassQ2.value == "12"){total += 5}
     if (PassQ3.value == "C"){total += 5}
     if (PassQ4.value == "False"){total += 5}
+    const dataToSend = {passTotal: total}
     console.log(total)
-  }
-}
+    fetch('/Send_Data',{
+         method:'POST',
+      headers:{
+      'Content-Type':'application/json'
+      },
+      body: JSON.stringify(dataToSend)
+  }).then(response => response.text())
+    .then(result => {
+      window.location.href = result;
+})}}}
 
 function confirm_answers_phish(){
+  var confirm = window.confirm("Do you want to submit your answers?");
+  if (confirm){
   var Q1 = document.querySelector('input[name="Phish_Hours"]:checked')
   var Q2 = document.querySelector('input[name="Phish_Header"]:checked')
   var Q3 = document.querySelector('input[name="Phish_Parcel"]:checked')
@@ -42,10 +55,22 @@ function confirm_answers_phish(){
     if (Q2.value == "True"){total += 5}
     if (Q3.value == "True"){total += 5}
     if (Q4.value == "True"){total += 5}
+    const dataToSend = {phishTotal: total}
     console.log(total)
-    }
-  }
+    fetch('/Send_Data',{
+       method:'POST',
+    headers:{
+    'Content-Type':'application/json'
+    },
+    body: JSON.stringify(dataToSend)
+    }).then(response => response.text())
+    .then(result => {
+      window.location.href = result;
+    })}}}
+
 function confirm_answers_social(){
+  var confirm = window.confirm("Do you want to submit your answers?");
+  if (confirm){
   var Q1 = document.querySelector('input[name="Stage_Social"]:checked')
   var Q2 = document.querySelector('input[name="Goal_Social"]:checked')
   var Q3 = document.querySelector('input[name="Prevent_Target"]:checked')
@@ -58,10 +83,22 @@ function confirm_answers_social(){
     if (Q2.value == "Man"){total += 5}
     if (Q3.value == "Care"){total += 5}
     if (Q4.value == "ALL"){total += 5}
+    const dataToSend = {socialTotal: total}
     console.log(total)
-  }
-}
+    fetch('/Send_Data',{
+       method:'POST',
+    headers:{
+    'Content-Type':'application/json'
+    },
+    body: JSON.stringify(dataToSend)
+    }).then(response => response.text())
+    .then(result => {
+      window.location.href = result;
+    })}}}
+
 function confirm_answers_usb(){
+  var confirm = window.confirm("Do you want to submit your answers?");
+  if (confirm){
   var Q1 = document.querySelector('input[name="q1"]:checked')
   var Q2 = document.querySelector('input[name="q2"]:checked')
   var Q3 = document.querySelector('input[name="q3"]:checked')
@@ -74,10 +111,22 @@ function confirm_answers_usb(){
     if (Q2.value == "3"){total += 5}
     if (Q3.value == "3"){total += 5}
     if (Q4.value == "3"){total += 5}
+    const dataToSend = {usbTotal: total}
     console.log(total)
-  }
-}
+    fetch('/Send_Data',{
+       method:'POST',
+    headers:{
+    'Content-Type':'application/json'
+    },
+    body: JSON.stringify(dataToSend)
+    }).then(response => response.text())
+    .then(result => {
+      window.location.href = result;
+    })}}}
+
 function confirm_answers_insider(){
+  var confirm = window.confirm("Do you want to submit your answers?");
+  if (confirm){
   var Q1 = document.querySelector('input[name="InsiderThreats"]:checked')
   var Q2 = document.querySelector('input[name="InsiderWeapon"]:checked')
   var Q3 = document.querySelector('input[name="Compromised_Insider"]:checked')
@@ -90,6 +139,15 @@ function confirm_answers_insider(){
     if (Q2.value == "A"){total += 5}
     if (Q3.value == "True"){total += 5}
     if (Q4.value == "A"){total += 5}
+    const dataToSend = {insiderTotal: total}
     console.log(total)
-  }
-}
+    fetch('/Send_Data',{
+       method:'POST',
+    headers:{
+    'Content-Type':'application/json'
+    },
+    body: JSON.stringify(dataToSend)
+    }).then(response => response.text())
+    .then(result => {
+      window.location.href = result;
+    })}}}
