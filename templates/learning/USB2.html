@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> USB </title>
+  <link rel="stylesheet" href="static/Masterpage.css">
+  <link rel="stylesheet" href="static/learning.css/USB.css"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+  <script src="../static/scripts/scripts.js"></script>
+</head>
+<body>
+  <div id="master-container-position">
+    <div id="master-container">
+      <div id="master-banner">
+        <h2>Cyber Security</h2>
+        <h1>Awareness</h1>
+        <img src="static/image/logo.png" id="master-banner-img" alt="insert image"</img>
+      </div>
+      <div id="master-pagetitle">
+        <h3> USB </h3>
+      </div>
+      <div class="hidden" id="master-dropdown-menu">
+        <form action="/Passwords" method="post">
+            <button id="dropdown-password-button"> Passwords </button> 
+          </form>
+          <form action="/Social" method="post">
+            <button id="dropdown-social-engineering-button" action="/Social"> Social Engineering </button>         
+          </form>
+          <form action="/Phishing" method="post"> 
+            <button id="dropdown-phishing-button"> Phishing </button> 
+          </form>
+          <form action="/InsiderThreats" method="post">
+            <button id="dropdown-insider-threats-button"> Insider Threats </button> 
+          </form>
+          <form action="/USB" method="post">
+            <button id="dropdown-USB-button"> USB </button> 
+          </form>
+      </div>
+      <div style="margin-top:-115.5px" id="master-dropdown">
+        <button id="master-dropdown-button" onclick="showdropdown()">
+         <img src="static/image/dropdown.png"> </img>
+        <div id="master-dropdown-menu" class="hidden">
+        </div>
+        </button>
+      </div>
+      <div id="USBContent">
+        
+          <p class="USBTitle">The dangers of USB</p>
+        <p>from the example displayed the best course of action would be to leave the USB. this is because
+            they can contain malware and cotain malicious exploits that can comprimise a device and steal data. 
+        </p>
+        <p class="USBTitle">But how?</p>
+        <p>
+            A USB device can be exploited to mimic a peripheral device such as a keyboard or mouse.
+            with a few scripts, the USB can mimic keystrokes on the device too install malware and disable
+            services.
+            Scripts can perform these keystrokes thousands of times faster than a person and is practicaly instant. meaning that
+            even if you have it plugged in for a second, its probably too late.
+        </p>
+            <p class="USBTitle">Security measures</p>
+          <p>
+            employees of an organisation may not be aware of this danger and plug in comprimised devices onto
+            workplace devices. But there is a solution that allows you to defend from these situations.  
+          </p>
+          <p class="USBTitle">Measures</p>
+          <ul>
+            <li>Endpoint protection - adopt a anti-virus solution that scans USB outputs in realtime to detect malware and remove before they can cause damage</li>
+            <li>Keep operating system up to date - protect against the latest exploits that comprimised USB devices may exploit</li>
+            <li>Disable Unnecessary USB Ports - can be done through group policies to totally disable ports on the system </li>
+            <li>Implement Device Control Policies - only allow authorized USB devices and deny the use of unauthorized ones</li>
+          </ul>
+    </div>
+
+      <form action="/USBQuiz" method="post">
+      <button id="master-nextpage-button"> Start Quiz </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

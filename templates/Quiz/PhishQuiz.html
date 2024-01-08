@@ -43,9 +43,36 @@
         </div>
         </button>
       </div>
-      <button id="master-nextpage-button">???</button>
-      <img src="static/image/PhishQuizMat.png" id="phishing-Quiz-img" alt="insert image"</img>
-       
+      <div id="paddingleft">
+      <p>Which of the below are true or false?</p>
+      <p>A: Sent at out of office hours?</p>
+      <input type="radio" id="components-four" name="Phish_Hours" value="True">
+      <label for="four">True</label><br>
+      <input type="radio"id="components-twelve" name="Phish_Hours" value="False">
+      <label for="twelve">False</label><br>
+
+
+      <p>B: Fake senders email in header information?</p>
+      <input type="radio" id="length-twelve" name="Phish_Header" value="True">
+      <label for="True">True</label><br>
+      <input type="radio"id="length-seven" name="Phish_Header" value="False">
+      <label for="False">False</label><br>
+
+
+      <p>C: You know you don’t have a parcel coming?</p>
+      <input type="radio" id="PassA" name="Phish_Parcel" value="True">
+      <label for="True">True</label><br>
+      <input type="radio" id="PassB" name="Phish_Parcel" value="False">
+      <label for="Fale">False</label><br>
+
+      <p>D: The fact they give no extra information or photo’s</p>
+      <input type="radio" id="True" name="Phish_Info" value="True">
+      <label for="True">True</label><br>
+      <input type="radio" id="False" name="Phish_Info" value="False">
+      <label for="False">False</label><br>
+      <button id="master-nextpage-button" onclick="confirm_answers_phish()"> Submit </button>
+      </div>
+      <img style="position:absolute" src="static/image/PhishQuizMat.png" id="phishing-Quiz-img" alt="insert image"</img>
       </div>
   </div>
 </body>

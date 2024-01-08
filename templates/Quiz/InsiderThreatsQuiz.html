@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>InsiderThreatsQuiz</title>
+  <link rel="stylesheet" href="static/Masterpage.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+  <script src="../static/scripts/scripts.js"></script>
+</head>
+<body>
+  <div id="master-container-position">
+    <div id="master-container">
+      <div id="master-banner">
+        <h2>Cyber Security</h2>
+        <h1>Awareness</h1>
+        <img src="static/image/logo.png" id="master-banner-img" alt="insert image"</img>
+      </div>
+      <div id="master-pagetitle">
+        <h3 style="font-size: 23px; margin-top: -63px" "> InsiderThreats Quiz </h3>
+      </div>
+      <div class="hidden" id="master-dropdown-menu">
+        <form action="/Passwords" method="post">
+            <button id="dropdown-password-button"> Passwords </button> 
+          </form>
+          <form action="/Social" method="post">
+            <button id="dropdown-social-engineering-button" action="/Social"> Social Engineering </button>         
+          </form>
+          <form action="/Phishing" method="post"> 
+            <button id="dropdown-phishing-button"> Phishing </button> 
+          </form>
+          <form action="/InsiderThreats" method="post">
+            <button id="dropdown-insider-threats-button"> Insider Threats </button> 
+          </form>
+          <form action="/USB" method="post">
+            <button id="dropdown-USB-button"> USB </button> 
+          </form>
+        </div>
+      <div style="margin-top:-98.5px" id="master-dropdown">
+        <button id="master-dropdown-button" onclick="showdropdown()">
+         <img src="static/image/dropdown.png"> </img>
+        <div id="master-dropdown-menu" class="hidden">
+        </div>
+        </button>
+      </div>
+        <p>Which of these is not a type of insider threat?</p>
+        <input type="radio" id="insider-threat-A" name="InsiderThreats" value="A">
+        <lable for="A">Compromisied Insider</lable><br>
+        <input type="radio" id="insider-threat-B" name="InsiderThreats" value="B">
+        <lable for="B">Malicious Insider</lable><br>
+        <input type="radio" id="insider-threat-C" name="InsiderThreats" value="C">
+        <lable for="C">Negligent Insider</lable><br>
+        <input type="radio" id="insider-threat-D" name="InsiderThreats" value="D">
+        <lable for="D">Vengeful Insider</lable>
+        <p>Which of these is not a weapon agaisnt insider threats?</p>
+        <input type="radio" id="insider-weapon-A" name="InsiderWeapon" value="A">
+        <lable for="A">User Behaviour Analytics</lable><br>
+        <input type="radio" id="insider-weapon-B" name="InsiderWeapon" value="B">
+        <lable for="B">Offensive Security</lable><br>
+        <input type="radio" id="insider-weapon-C" name="InsiderWeapon" value="C">
+        <lable for="C">Employee Training</lable><br>
+        <input type="radio" id="insider-weapon-D" name="InsiderWeapon" value="D">
+        <lable for="D">Identity and Access Management</lable>
+        <p>True or False? Compromised Insiders can be caused by negligence.</p>
+        <input type="radio" id="True" name="Compromised_Insider" value="True">
+        <lable for="True">True</lable><br>
+        <input type="radio" id="False" name="Compromised_Insider" value="False">
+        <lable for="False">False</lable>
+        <p>How soon should an ex-employee's account be decommissioned?</p>
+        <input type="radio" id="decommission-A" name="Decommission" value="A">
+        <lable for="A">Immediately</lable><br>
+        <input type="radio" id="decommission-B" name="Decommission" value="B">
+        <lable for="B">After a few days</lable><br>
+        <input type="radio" id="decommission-C" name="Decommission" value="C">
+        <lable for="C">After a few weeks</lable><br>
+        <input type="radio" id="decommission-D" name="Decommission" value="D">
+        <lable for="D">After a few months</lable><br>
+        <input type="radio" id="decommission-E" name="Decommission" value="E">
+        <lable for="E">After a few years</lable>
+      <button id="master-nextpage-button" onclick="confirm_answers_insider()">Submit</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>USB</title>
+  <link rel="stylesheet" href="static/Masterpage.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+  <script src="../static/scripts/scripts.js"></script>
+ 
+</head>
+<body>
+  <div id="master-container-position">
+    <div id="master-container">
+      <div id="master-banner">
+        <h2>Cyber Security</h2>
+        <h1>Awareness</h1>
+        <img src="static/image/logo.png" id="master-banner-img" alt="insert image"</img>
+      </div>
+      <div id="master-pagetitle">
+        <h3 style="font-size: 25px; margin-top: -52px" "> USB quiz </h3>
+      </div>
+      <div class="hidden" id="master-dropdown-menu">
+        <form action="/Passwords" method="post">
+            <button id="dropdown-password-button"> Passwords </button> 
+          </form>
+          <form action="/Social" method="post">
+            <button id="dropdown-social-engineering-button" action="/Social"> Social Engineering </button>         
+          </form>
+          <form action="/Phishing" method="post"> 
+            <button id="dropdown-phishing-button"> Phishing </button> 
+          </form>
+          <form action="/InsiderThreats" method="post">
+            <button id="dropdown-insider-threats-button"> Insider Threats </button> 
+          </form>
+          <form action="/USB" method="post">
+            <button id="dropdown-USB-button"> USB </button> 
+          </form>
+        </div>
+      <div style="margin-top:-100.5px" id="master-dropdown">
+        <button id="master-dropdown-button" onclick="showdropdown()">
+         <img src="static/image/dropdown.png"> </img>
+        <div id="master-dropdown-menu" class="hidden">
+        </div>
+        </button>
+      </div>
+      <p>Q1- What does USB stand for</p>
+      <input type="radio" id="q11" name="q1" value="1">
+      <label>universal socket bus</label><br>
+      <input type="radio"id="q12" name="q1" value="2">
+      <label>unidirectional serial bracket</label><br>
+      <input type="radio" id="q13" name="q1" value="3">
+      <label>univeral serial bus</label><br>
+      <input type="radio"id="q14" name="q1" value="4">
+      <label>None of the above</label>
+
+      <p>Q2- Which one of these statments are true?</p>
+      <input type="radio" id="q21" name="q2" value="1">
+      <label>USB devices are immune to malware and viruses</label><br>
+      <input type="radio"id="q22" name="q2" value="2">
+      <label>USB ports cannot be exploited for unauthorized access</label><br>
+      <input type="radio" id="q23" name="q2" value="3">
+      <label>USB devices can be used to inject malware and virus's into a computer system</label><br>
+      <input type="radio"id="q24" name="q2" value="4">
+      <label>USB devices only pose a threat when connected to the internet</label>
+
+      <p>Q3- Which one of these measures can be put in place for USB security?</p>
+      <input type="radio" id="q31" name="q3" value="1">
+      <label>Disabling USB ports on all computers in an organization.</label><br>
+      <input type="radio" id="q32" name="q3" value="2">
+      <label>Allowing unrestricted use of any USB device to enhance convenience.</label><br>
+      <input type="radio" id="q33" name="q3" value="3">
+      <label>Implementing endpoint security solutions and controlling USB device access.</label><br>
+      <input type="radio" id="q34" name="q3" value="4">
+      <label>Visualy inspect USB devices before plugging into a system</label>
+
+      <p>Q4- What should you do if you find a USB on the floor?</p>
+      <input type="radio" id="q41" name="q4" value="1">
+      <label>Plug it in at work to see its content</label><br>
+      <input type="radio" id="q42" name="q4" value="2">
+      <label>Go home to plug it in and view its content</label><br>
+      <input type="radio" id="q43" name="q4" value="3">
+      <label>leave it and continue with your day</label><br>
+      <input type="radio" id="q44" name="q4" value="4">
+      <label>None of the above</label>
+      <button id="master-nextpage-button" onclick="confirm_answers_usb()">Submit</button>
+    </div>
+  </div>
+</body>
+</html>

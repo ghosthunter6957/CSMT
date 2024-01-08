@@ -4,6 +4,7 @@ from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def main():
   return render_template('Index.html')
@@ -29,7 +30,7 @@ def login():
       else:
         return redirect(url_for('MainMenu', name=name, priv=priv))
     elif user["username"] == username and user["password"] != password:
-      return render_template('Index.html', Passerror="Invalid Password") 
+      return render_template('Index.html', Passerror="Invalid Password")
     f.close()
   return render_template('Index.html', Usererror="User not found")
 
@@ -40,43 +41,75 @@ def DashBoard():
   priv = request.args.get('priv')
   return render_template('MainPage.html', name=name, priv=priv)
 
+
 @app.route('/MainMenu', methods=['GET', 'POST'])
 def MainMenu():
   name = request.args.get('name')
   priv = request.args.get('priv')
   return render_template('MainMenu.html', name=name, priv=priv)
 
+
 @app.route('/Social', methods=['GET', 'POST'])
 def Social():
   return render_template('/learning/Social.html')
+
 
 @app.route('/Phishing', methods=['GET', 'POST'])
 def Phishing():
   return render_template('/learning/Phishing.html')
 
+
 @app.route('/Passwords', methods=['GET', 'POST'])
 def Passwords():
+  print("hi")
   return render_template('/learning/Passwords.html')
+
 
 @app.route('/InsiderThreats', methods=['GET', 'POST'])
 def InsiderThreats():
   return render_template('/learning/InsiderThreats.html')
-  
+
+@app.route('/InsiderThreats2', methods=['GET', 'POST'])
+def InsiderThreats2():
+  return render_template('/learning/InsiderThreats2.html')
+
 @app.route('/USB', methods=['GET', 'POST'])
 def USB():
   return render_template('/learning/USB.html')
+
+
+@app.route('/USB2', methods=['GET', 'POST'])
+def USB2():
+  return render_template('/learning/USB2.html')
+
+
+@app.route('/USBQuiz', methods=['GET', 'POST'])
+def USBQuiz():
+  return render_template('/Quiz/USBQuiz.html')
+
 
 @app.route('/PhishQuiz', methods=['GET', 'POST'])
 def PhishQuiz():
   return render_template('/Quiz/PhishQuiz.html')
 
+
 @app.route('/SocialQuiz', methods=['GET', 'POST'])
 def SocialQuiz():
   return render_template('/Quiz/SocialQuiz.html')
 
-@app.route('/PasswordQuiz', methods=['GET','POST'])
+
+@app.route('/PasswordQuiz', methods=['GET', 'POST'])
 def PasswordQuiz():
   return render_template('/Quiz/PasswordQuiz.html')
+
+@app.route('/InsiderThreatsQuiz', methods=['GET', 'POST'])
+def InsiderThreatsQuiz():
+  return render_template('/Quiz/InsiderThreatsQuiz.html')
+
+@app.route('/ResultsProcess', methods=['GET', 'POST'])
+def ResultsProcess():
+  return (print("hi"))
+
 
 app.run(host='0.0.0.0', port=81)
 if __name__ == '__main__':

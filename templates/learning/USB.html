@@ -52,8 +52,9 @@
         <div id="USBContent">    
     </div>
   </div>
-      <button id="master-nextpage-button">Next Page</button>
-      <div style="border-style: solid; margin: 2%; border-color: #3C1053;">
+      <form action="/USB2" method="post">
+      <button id="master-nextpage-button"> Next Page </button>
+      </form>
             <p class="USBTitle">What is USB?</p>
           <p>USB stands for Universal Serial Bus and is a standard that was established
             in the 1990's.
@@ -66,20 +67,22 @@
               <li>transfering data between devices.</li>
               <li>charging devices from a power source.</li>
           </ul>
-
-          </div>
-
-          <div style=" border-style: solid; border-color: #3C1053;">
             <p class = "USBTitle">What do you do?</p>
             <div style="display: inline-flex;">
               <img class = "USBF"src="static/image/USBonthefloor.jpg">
               <ol>
                 <li>plug in the device to see whats inside?</li>
-                <li>leave it on the floor</li>
+                <li id="USBA">leave it on the floor</li>
               </ol>
             </div>
-
-          </div>
+            <button id="Reveal">Reveal</button>
       </div>
+    <script>
+      document.getElementById("Reveal").addEventListener("click", function() {
+        var paragraph = document.getElementById('USBA');
+        paragraph.style.color = "red";
+        
+      });
+    </script>
 </body>
 </html>

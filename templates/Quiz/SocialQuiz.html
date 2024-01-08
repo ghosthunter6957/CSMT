@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Social Engineering</title>
   <link rel="stylesheet" href="static/Masterpage.css">
-  <link rel="stylesheet" href="static/learning.css/Social.css"> 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
   <script src="../static/scripts/scripts.js"></script>
 </head>
@@ -16,8 +15,8 @@
         <h1>Awareness</h1>
         <img src="static/image/logo.png" id="master-banner-img" alt="insert image"</img>
       </div>
-      <div  id="master-pagetitle">
-        <h3> Social </h3>
+      <div id="master-pagetitle">
+        <h3 style="font-size: 25px; margin-top: -52px" "> Social Quiz </h3>
       </div>
       <div class="hidden" id="master-dropdown-menu">
         <form action="/Passwords" method="post">
@@ -36,35 +35,55 @@
             <button id="dropdown-USB-button"> USB </button> 
           </form>
         </div>
-      <div style="margin-top:-115.5px" id="master-dropdown">
+      <div style="margin-top:-100.5px" id="master-dropdown">
         <button id="master-dropdown-button" onclick="showdropdown()">
          <img src="static/image/dropdown.png"> </img>
         <div id="master-dropdown-menu" class="hidden">
         </div>
         </button>
       </div>
-      <button id="master-nextpage-button">Next Page</button>
-      <h4><u> Social Engineering Quiz </u></h4>
-      <p style="position:absolute ; margin-top:-12.5px">Q1- How many stages of a social engineering attack are there? </p>
-       <p style="position:absolute ; margin-top:11.5px">A - 1 </p>
-       <p style="position:absolute ; margin-top:30.5px">B - 4 </p>
-       <p style="position:absolute ; margin-top:48.5px">C - 3 </p>
-       <p style="position:absolute ; margin-top:67.5px">D - 3 </p>
-      <p style="position:absolute ; margin-top:85.5px">Q2- What is the goal of a social engineering attack? </p>
-       <p style="position:absolute ; margin-top:108.5px">A - To Manipulate and gain control a computer sytem </p>
-       <p style="position:absolute ; margin-top:129.5px">B - To use worms to courrpt a computer system </p>
-       <p style="position:absolute ; margin-top:149.5px">C - To intercept packets and eavsdrop on sensative information </p>
-       <p style="position:absolute ; margin-top:171.5px">D - To deny any service to a computer system </p>
-      <p style="position:absolute ; margin-top:193.5px">Q3- How can a user prevent themselves from being a target? </p>
-       <p style="position:absolute ; margin-top:215.5px">A - Post work related content on social media </p>
-       <p style="position:absolute ; margin-top:237.5px">B - Talk about sensative information in public areas </p>
-       <p style="position:absolute ; margin-top:257.5px">C - Be careful on what you say online and in person </p>
-       <p style="position:absolute ; margin-top:275.5px">D - Click on links found in your junk section of your email page </p>
-      <p style="position:absolute ; margin-top:300px">Q4- Which of these below are social engineering techniques? </p>
-       <p style="position:absolute ; margin-top:320px">A - manipulation </p>
-       <p style="position:absolute ; margin-top:340px">B - impersonation </p>
-       <p style="position:absolute ; margin-top:360px">C - phishing  </p>
-       <p style="position:absolute ; margin-top:380px">D - All of the above </p>
+      <button id="master-nextpage-button" onclick="confirm_answers_social()">Submit</button>
+      <p>Q1- How many stages of a social engineering attack are there?</p>
+      <input type="radio" id="components-OneA" name="Stage_Social" value="1">
+      <label for="four">1</label><br>
+      <input type="radio"id="components-FourB" name="Stage_Social" value="4">
+      <label for="twelve">4</label><br>
+      <input type="radio" id="components-ThreeC" name="Stage_Social" value="3">
+      <label for="ten">3</label><br>
+      <input type="radio"id="components-TwoD" name="Stage_Social" value="2">
+      <label for="seven">2</label>
+
+      <p>Q2- What is the goal of a social engineering attack?</p>
+      <input type="radio" id="ManipulateA" name="Goal_Social" value="Man">
+      <label for="twelve">To Manipulate and gain control a computer sytem</label><br>
+      <input type="radio"id="WormsB" name="Goal_Social" value="Worm">
+      <label for="seven">To use worms to courrpt a computer system</label><br>
+      <input type="radio" id="InterceptC" name="Goal_Social" value="Int">
+      <label for="nine">To intercept packets and eavsdrop on sensative 
+      information</label><br>
+      <input type="radio"id="DenyD" name="Goal_Social" value="15">
+      <label for="fifteen"> To deny any service to a computer system</label>
+
+      <p>Q3- How can a user prevent themselves from being a target?</p>
+      <input type="radio" id="PassA" name="Prevent_Target" value="Post">
+      <label for="PostA">Post work related content on social media</label><br>
+      <input type="radio" id="PassB" name="Prevent_Target" value="Talk">
+      <label for="TalkB">Talk about sensative information in public areas</label><br>
+      <input type="radio" id="PassC" name="Prevent_Target" value="Care">
+      <label for="CareC">Be careful on what you say online and in person</label><br>
+      <input type="radio" id="PassE" name="Prevent_Target" value="Click">
+      <label for="ClickD">Click on links found in your junk section of your email 
+       page</label>
+
+      <p>Q4- Which of these below are social engineering techniques?</p>
+      <input type="radio" id="PassM" name="Social_Tech" value="PM">
+      <label for="MAN">manipulation</label><br>
+      <input type="radio" id="PassI" name="Social_Tech" value="PI">
+      <label for="IMP">impersonation</label><br>
+      <input type="radio" id="PassP" name="Social_Tech" value="PP">
+      <label for="PHISH">phishing</label><br>
+      <input type="radio" id="PassALL" name="Social_Tech" value="ALL">
+      <label for="ALL">All of the above</label>
     </div>
   </div>
 </body>
