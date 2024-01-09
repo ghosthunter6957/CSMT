@@ -5,6 +5,7 @@ from werkzeug.utils import redirect
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
+
 @app.route('/')
 def main():
   return render_template('Index.html')
@@ -24,17 +25,24 @@ def login():
         user["first"] = "N"
         with open('data/passwords.json', 'w') as f:
           json.dump(users, f)
-        return render_template('MainPage.html',)
+        return render_template('MainPage.html')
       else:
-        return render_template('MainMenu.html')
+        return redirect(url_for('MainMenu'))
     elif user["username"] == username and user["password"] != password:
       return render_template('Index.html', Passerror="Invalid Password")
     f.close()
   return render_template('Index.html', Usererror="User not found")
-  
+
+
 @app.route('/Social', methods=['GET', 'POST'])
 def Social():
   return render_template('/learning/Social.html')
+
+
+@app.route('/MainMenu', methods=['GET', 'POST'])
+def MainMenu():
+  User = session.get('name')
+  return render_template('MainMenu.html', username=User)
 
 
 @app.route('/Phishing', methods=['GET', 'POST'])
@@ -52,9 +60,11 @@ def Passwords():
 def InsiderThreats():
   return render_template('/learning/InsiderThreats.html')
 
+
 @app.route('/InsiderThreats2', methods=['GET', 'POST'])
 def InsiderThreats2():
   return render_template('/learning/InsiderThreats2.html')
+
 
 @app.route('/USB', methods=['GET', 'POST'])
 def USB():
@@ -85,15 +95,17 @@ def SocialQuiz():
 def PasswordQuiz():
   return render_template('/Quiz/PasswordQuiz.html')
 
+
 @app.route('/InsiderThreatsQuiz', methods=['GET', 'POST'])
 def InsiderThreatsQuiz():
   return render_template('/Quiz/InsiderThreatsQuiz.html')
-  
+
+
 @app.route('/Send_Data', methods=['GET', 'POST'])
 def Send_Data():
   data = request.get_json()
-  received_variable = list(data.keys())[0] #key
-  received_data = data.get(received_variable) #value of key
+  received_variable = list(data.keys())[0]  #key
+  received_data = data.get(received_variable)  #value of key
   name1 = session['name']
   passw1 = session['passw']
   with open('data/passwords.json', 'r') as f:
