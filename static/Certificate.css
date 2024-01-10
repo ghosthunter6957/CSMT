@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Aclonica', sans-serif;
+  color: #000000;
+}
+/* Style the headings */
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+  color: #FFFFFF;
+}
+certtext{
+  padding-top: 16px;
+  font-size: 17px;
+  color: #000000;
+  text-align: center;
+}
+#results-text{
+  padding-top:60px;
+  text-align: center;
+}
+#login-container-position{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+}
+#login-banner {
+  padding-top: 40px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: -40px;
+  margin-left: -40px;
+  margin-right: -40px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #3C1053;
+  overflow: hidden;
+}
+#login-banner-img{
+  position: absolute;
+  width: 80px; 
+  height: 80px; 
+  top:37px;
+  left:20%; 
+  transform-origin: top left; /* Keeps the top-left corner in place */
+  transform: scale(1);
+}
+
+#login-container {
+  width: 600px;
+  height: 450px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+#resultDisplay{
+  padding-top:145px;
+  padding-left:120px;
+  font-size: 26px;
+}

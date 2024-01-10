@@ -53,8 +53,8 @@ function confirm_answers_phish(){
   }else{
     if (Q1.value == "True"){total += 5}
     if (Q2.value == "True"){total += 5}
-    if (Q3.value == "True"){total += 5}
-    if (Q4.value == "True"){total += 5}
+    if (Q3.value == "False"){total += 5}
+    if (Q4.value == "False"){total += 5}
     const dataToSend = {phishTotal: total}
     console.log(total)
     fetch('/Send_Data',{
@@ -151,3 +151,6 @@ function confirm_answers_insider(){
     .then(result => {
       window.location.href = result;
     })}}}
+
+
+  

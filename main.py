@@ -1,5 +1,5 @@
 import os, json
-from flask import Flask, render_template, request, url_for, session
+from flask import Flask, render_template, request, url_for, session, jsonify
 from werkzeug.utils import redirect
 
 app = Flask(__name__)
@@ -99,6 +99,10 @@ def PasswordQuiz():
 @app.route('/InsiderThreatsQuiz', methods=['GET', 'POST'])
 def InsiderThreatsQuiz():
   return render_template('/Quiz/InsiderThreatsQuiz.html')
+  
+@app.route('/Certificate', methods=['GET', 'POST'])
+def Certificate():
+  return render_template('Certificate.html')
 
 
 @app.route('/Send_Data', methods=['GET', 'POST'])
@@ -144,6 +148,17 @@ def Send_Data():
         return "USB"
   return "Data Received"
 
+@app.route('/Calculate', methods=['GET', 'POST'])
+def Calculate():
+  name1 = session['name']
+  passw1 = session['passw']
+  total_score = 0
+  with open('data/passwords.json', 'r') as f:
+    users = json.load(f)
+  for user in users["users"]:
+    if user["username"] == name1 and user["password"] == passw1:
+      total_score = user["Pass"] + user["Phish"] + user["USB"] + user["Social"] + user["Insider"]
+  return jsonify({'total_score': total_score})
 
 app.run(host='0.0.0.0', port=81)
 if __name__ == '__main__':

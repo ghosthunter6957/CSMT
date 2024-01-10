@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Certificate</title>
+  <link rel="stylesheet" href="static/Certificate.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap">
+</head>
+<body>
+  <div id="login-container-position">
+    <div id="login-container">
+      <div id="login-banner">
+        <img src="static/image/logo.png" id="login-banner-img" alt="insert image"</img> 
+        <h2>Cyber Security</h2>
+        <h1>Awareness</h1> 
+      </div>
+      <div id='results-text'>
+      <certtext>Congratulations on successfully completing the Cyber Security Awareness course! Your dedication to enhancing your knowledge and skills in safeguarding digital information is truly commendable. Wishing you continued success in your Cyber security journey! </certtext></div>
+      <div id="resultDisplay"></div>
+    </div>
+  <script>
+    window.onload = results()
+    function results(){
+      fetch('/Calculate')
+      .then(response => response.json())
+      .then(data => {
+        const totalResult = data.total_score;
+        console.log(totalResult);
+        document.getElementById('resultDisplay').innerHTML = `Your total score is ${totalResult}%!`;
+      })
+    }
+  </script>
+</body>
+</html>
