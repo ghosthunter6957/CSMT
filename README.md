@@ -1,6 +1,6 @@
 Malware Marines Cyber Awareness Course User Guide 
 
-Welcome to the Malware Marines Cyber Awareness Course. To access our project and run our website application, you can use Replit IDE using this link and copying it into your browser: https://replit.com/@NathanFowler4/MalwareMarinesNew?v=1. 
+Welcome to the Malware Marines Cyber Awareness Course. To access our project and run our website application, you can use Replit IDE using this link and copying it into your browser: [https://replit.com/@NathanFowler4/MalwareMarinesNew?v=1](https://replit.com/@NathanFowler4/MalwareMarines?v=1). 
 
 This link will require you to ‘fork’ the code and save it to your profile:  
 
